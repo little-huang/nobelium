@@ -70,7 +70,17 @@ const Header = ({ navBarTitle, fullWidth }) => {
           <Link href="/">
             <a aria-label={BLOG.title}>
               <div className="h-6">
-                <svg
+                <a href={BLOG.socialLink || '#'} className="flex">
+                  <Image
+                    alt={BLOG.author}
+                    width={24}
+                    height={24}
+                    src={`https://gravatar.com/avatar/${emailHash}`}
+                    className="rounded-full"
+                  />
+                  <p className="ml-2 md:block">{BLOG.author}</p>
+                </a>
+                {/* <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -96,7 +106,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
                       <stop offset="1" stopColor="#E9E9E9" stopOpacity="0" />
                     </radialGradient>
                   </defs>
-                </svg>
+                </svg> */}
               </div>
             </a>
           </Link>
