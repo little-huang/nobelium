@@ -78,7 +78,6 @@ const Header = ({ navBarTitle, fullWidth }) => {
         <div className="flex items-center">
           <Link href="/">
             <a aria-label={BLOG.title}>
-              <div className="h-6">
                 <a href={BLOG.socialLink || '#'} className="flex">
                   <Image
                     alt={BLOG.author}
@@ -115,7 +114,6 @@ const Header = ({ navBarTitle, fullWidth }) => {
                     </radialGradient>
                   </defs>
                 </svg> */}
-              </div>
             </a>
           </Link>
           {navBarTitle
