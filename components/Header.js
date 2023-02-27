@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
+import Image from 'next/image'
+import { createHash } from 'crypto'
 
 const NavBar = () => {
   const locale = useLocale()
@@ -47,6 +49,13 @@ const Header = ({ navBarTitle, fullWidth }) => {
       navRef.current?.classList.add('remove-sticky')
     }
   }
+  
+  const emailHash = createHash('md5')
+  .update(BLOG.email)
+  .digest('hex')
+  .trim()
+  .toLowerCase()
+  
   useEffect(() => {
     const obvserver = new window.IntersectionObserver(handler)
     obvserver.observe(sentinalRef.current)
@@ -78,7 +87,6 @@ const Header = ({ navBarTitle, fullWidth }) => {
                     src={`https://gravatar.com/avatar/${emailHash}`}
                     className="rounded-full"
                   />
-                  <p className="ml-2 md:block">{BLOG.author}</p>
                 </a>
                 {/* <svg
                   width="24"
