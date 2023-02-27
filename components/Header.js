@@ -49,13 +49,13 @@ const Header = ({ navBarTitle, fullWidth }) => {
       navRef.current?.classList.add('remove-sticky')
     }
   }
-  
+
   const emailHash = createHash('md5')
-  .update(BLOG.email)
-  .digest('hex')
-  .trim()
-  .toLowerCase()
-  
+    .update(BLOG.email)
+    .digest('hex')
+    .trim()
+    .toLowerCase()
+
   useEffect(() => {
     const obvserver = new window.IntersectionObserver(handler)
     obvserver.observe(sentinalRef.current)

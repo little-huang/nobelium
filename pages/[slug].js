@@ -32,7 +32,7 @@ export async function getStaticProps ({ params: { slug } }) {
     .digest('hex')
     .trim()
     .toLowerCase()
-  
+
   return {
     props: { post, blockMap, emailHash },
     revalidate: 1
