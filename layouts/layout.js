@@ -8,6 +8,7 @@ import { useLocale } from '@/lib/locale'
 import { useRouter } from 'next/router'
 import Comments from '@/components/Comments'
 
+const previewImages = true
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
@@ -69,6 +70,7 @@ const Layout = ({
           <div className="-mt-4">
             <NotionRenderer
               recordMap={blockMap}
+              previewImages={previewImages}
               components={{
                 image: Image,
                 equation: Equation,
