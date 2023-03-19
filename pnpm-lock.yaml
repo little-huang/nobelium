@@ -18,7 +18,7 @@ specifiers:
   next-sitemap: ^1.6.203
   notion-client: ^4.10.0
   notion-compat: ^6.16.0
-  notion-utils: ^4.10.0
+  notion-utils: ^6.16.0
   p-map: ^5.3.0
   p-memoize: ^6.0.1
   postcss: ^8.3.11
@@ -39,7 +39,7 @@ dependencies:
   next: 12.3.4_sfoxds7t5ydpegc3knd667wn6m
   notion-client: 4.19.8
   notion-compat: registry.npmmirror.com/notion-compat/6.16.0
-  notion-utils: 4.19.8
+  notion-utils: registry.npmmirror.com/notion-utils/6.16.0
   p-map: registry.npmmirror.com/p-map/5.5.0
   p-memoize: registry.npmmirror.com/p-memoize/6.0.2
   preact: 10.13.0
@@ -2466,21 +2466,13 @@ packages:
     dependencies:
       got: registry.npmmirror.com/got/11.8.6
       notion-types: 4.19.8
-      notion-utils: 4.19.8
+      notion-utils: registry.npmmirror.com/notion-utils/4.19.8
       p-map: registry.npmmirror.com/p-map/4.0.0
     dev: false
 
   /notion-types/4.19.8:
     resolution: {integrity: sha512-KLszLpe2UtejnX0bCoLe8JFZPeQyUS15F29LW4iRPFwnlNZePWz0h303F0IBhxOXQRiWIwy4mEGzRDu45a+dhA==}
     engines: {node: '>=12'}
-    dev: false
-
-  /notion-utils/4.19.8:
-    resolution: {integrity: sha512-d85bSrfr58/vReesEALiZcDcczRa/iiBZagmoNFjLX87ooMeJoPs9CLwGuCg0inhDFFqAU8c4PJgAc7/FNOM/A==}
-    engines: {node: '>=12'}
-    dependencies:
-      notion-types: 4.19.8
-      p-queue: 6.6.2
     dev: false
 
   /npmlog/4.1.2:
@@ -3072,7 +3064,7 @@ packages:
       lodash.throttle: 4.1.1
       medium-zoom: 1.0.8
       notion-types: 4.19.8
-      notion-utils: 4.19.8
+      notion-utils: registry.npmmirror.com/notion-utils/4.19.8
       prismjs: 1.29.0
       rc-dropdown: 3.6.2_sfoxds7t5ydpegc3knd667wn6m
       rc-menu: 9.8.2_sfoxds7t5ydpegc3knd667wn6m
@@ -4392,6 +4384,16 @@ packages:
     name: notion-types
     version: 6.16.0
     engines: {node: '>=12'}
+    dev: false
+
+  registry.npmmirror.com/notion-utils/4.19.8:
+    resolution: {integrity: sha512-d85bSrfr58/vReesEALiZcDcczRa/iiBZagmoNFjLX87ooMeJoPs9CLwGuCg0inhDFFqAU8c4PJgAc7/FNOM/A==, registry: https://packages.aliyun.com/5edefa8d405cdab50f4003e2/npm/npm-registry/, tarball: https://registry.npmmirror.com/notion-utils/-/notion-utils-4.19.8.tgz}
+    name: notion-utils
+    version: 4.19.8
+    engines: {node: '>=12'}
+    dependencies:
+      notion-types: 4.19.8
+      p-queue: 6.6.2
     dev: false
 
   registry.npmmirror.com/notion-utils/6.16.0:
