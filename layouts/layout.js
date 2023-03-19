@@ -70,6 +70,7 @@ const Layout = ({
             <NotionRenderer
               recordMap={blockMap}
               components={{
+                image: Image,
                 equation: Equation,
                 code: Code,
                 collection: Collection,
