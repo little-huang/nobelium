@@ -70,6 +70,7 @@ const Layout = ({
           <div className="-mt-4">
             <NotionRenderer
               recordMap={blockMap}
+              previewImagesEnabled={previewImages}
               previewImages={previewImages}
               components={{
                 image: Image,
