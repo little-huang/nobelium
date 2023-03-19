@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Container from '@/components/Container'
 import TagItem from '@/components/TagItem'
-import { NotionRenderer, Equation, Code, Collection, CollectionRow } from 'react-notion-x'
+import { NotionRenderer, Equation, Code, Collection, CollectionRow, Modal } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import { useLocale } from '@/lib/locale'
@@ -77,7 +77,8 @@ const Layout = ({
                 equation: Equation,
                 code: Code,
                 collection: Collection,
-                collectionRow: CollectionRow
+                collectionRow: CollectionRow,
+                modal: Modal
               }}
               mapPageUrl={mapPageUrl}
             />
